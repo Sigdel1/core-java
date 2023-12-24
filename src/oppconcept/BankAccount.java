@@ -1,4 +1,4 @@
-import javax.naming.Name;
+package oppconcept;
 
 public class BankAccount {
 
@@ -10,10 +10,8 @@ public class BankAccount {
     String accountHolderDateOfBirth;
     //socialSecurityNumber-String-variable
     String socialSecurityNumber;
-    //gender-String-variable
-    String gender;
-    //accountType-String-variable
-    String accountType;
+    Gender accountHolderGender;
+    Accounttype accountType;
     //accountBalance-double-variable
     double accountBalance;
 
@@ -30,20 +28,22 @@ public class BankAccount {
     //bankName-String-constant(if single bank is take into consideration)
     final String BANK_NAME = "Bank Of America";
 
-
     //Behavior
-
-
 
     public static void main(String[] args) {
         BankAccount tamanAccount = new BankAccount();
         tamanAccount.accountHolderName="Taman Neupane";
         tamanAccount.accountNumber="1233456";
+        tamanAccount.accountHolderGender=Gender.MALE;
+        tamanAccount.accountType=Accounttype.CHECKING;
 
 
         BankAccount abcAccount = new BankAccount();
         abcAccount.accountHolderName="ABC Neupane";
         abcAccount.accountNumber="34568956";
+        abcAccount.accountHolderGender=Gender.PREFER_NOT_TO_SAY;
+        abcAccount.accountType=Accounttype.SAVING;
+
 
         System.out.println(tamanAccount.accountHolderName);
         System.out.println(abcAccount.accountHolderName);
